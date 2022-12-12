@@ -51,4 +51,22 @@ else if (resultPlayer2 > resultPlayer1) {
 document.getElementById('finalResult').innerText = finalResult;
 
 
-// -----------------------------------------------------------------
+// ESERCIZIO NUMERO 2:
+
+// 1. Mi creo la mia array con le validMail
+// 2. Collego l'EventListner al bottone
+// 3. Mi creo una variabile con mail.value;
+// 4. La stampo in console per assicurarmi sia corretto
+// 5. Faccio partire un ciclo che verifichi all'interno dell'array se la mail che l'user ha inserito nel form è tra le validMail
+// 6. Se sì, faccio comparire ACCESSO COMPLETO, se false, faccio comparire ACCESSO NEGATO
+
+const validMail = ['validmail1@mail.com', 'validmail2@mail.com', 'validmail3@mail.com', 'validmail4@mail.com'];
+
+console.log(validMail);
+
+userChoice.addEventListener('click' , function(){
+
+    const userMail = document.getElementById('userMail').value;
+    console.log(userMail);
+    
+})
