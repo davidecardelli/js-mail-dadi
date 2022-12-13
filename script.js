@@ -60,13 +60,24 @@ document.getElementById('finalResult').innerText = finalResult;
 // 5. Faccio partire un ciclo che verifichi all'interno dell'array se la mail che l'user ha inserito nel form è tra le validMail
 // 6. Se sì, faccio comparire ACCESSO COMPLETO, se false, faccio comparire ACCESSO NEGATO
 
-const validMail = ['validmail1@mail.com', 'validmail2@mail.com', 'validmail3@mail.com', 'validmail4@mail.com'];
+const validMail = ["pippo@mail.com", "pluto@mail.com", "paperino@mail.com"];
 
-console.log(validMail);
+const message = document.getElementById('message');
+const userChoice = document.getElementById('userChoice');
+
 
 userChoice.addEventListener('click' , function(){
 
     const userMail = document.getElementById('userMail').value;
-    console.log(userMail);
-    
+
+    mail = false;
+    message.innerText = 'Mail errata';
+
+    for (let i = 0; i < validMail.length; i++) {
+        if (userMail === validMail[i]) {
+            mail = true;
+            message.innerText = 'Mail corretta';
+        }
+    }
+
 })
