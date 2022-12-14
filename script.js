@@ -62,7 +62,7 @@ document.getElementById('finalResult').innerText = finalResult;
 
 const validMail = ["pippo@mail.com", "pluto@mail.com", "paperino@mail.com"];
 
-const message = document.getElementById('message');
+const listResult = document.getElementById('listResult');
 const userChoice = document.getElementById('userChoice');
 
 
@@ -71,13 +71,14 @@ userChoice.addEventListener('click' , function(){
     const userMail = document.getElementById('userMail').value;
 
     mail = false;
-    message.innerText = 'Mail errata';
 
     for (let i = 0; i < validMail.length; i++) {
         if (userMail === validMail[i]) {
             mail = true;
-            message.innerText = 'Mail corretta';
         }
     }
+
+    const message = mail ? 'Mail corretta' : 'Mail errata';
+    listResult.innerText = message;
 
 })
